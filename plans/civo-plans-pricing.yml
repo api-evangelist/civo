@@ -18,3 +18,15 @@ plans:
   - No credit card required
   - Expires after 30 days
 note: Pricing is usage-based with hourly billing. All plans include free data transfer. New accounts receive $250 free credits.
+x-canonical:
+  generated: '2026-10-18'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Free Credits
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
