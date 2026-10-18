@@ -1,0 +1,8 @@
+generated: '2026-10-18'
+method: searched
+source: https://status.civo.com, https://www.civo.com/api
+versioning: none
+deprecation: none
+status_page: https://status.civo.com
+sla: none
+note: No published versioning or deprecation policy found. API appears to be versioned at v2 (https://api.civo.com/v2). Status page available but no SLA documentation found.

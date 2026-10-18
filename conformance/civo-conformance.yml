@@ -1,0 +1,26 @@
+generated: '2026-10-18'
+method: searched
+source: https://www.civo.com/api, https://www.civo.com/docs
+standards:
+- id: oauth2
+  conforms: partial
+  evidence: Civo API supports OAuth2 via JSON Web Tokens with Authorization Code Flow and Client Credentials Flow, documented at https://www.civo.com/api
+- id: json-api
+  conforms: partial
+  evidence: API responses are JSON-encoded objects for all 2xx statuses, documented at https://www.civo.com/api
+- id: s3-api
+  conforms: true
+  evidence: Civo Object Store provides S3-compatible API for object storage, documented at https://www.civo.com/docs/object-stores
+- id: kubernetes-api
+  conforms: true
+  evidence: Civo Kubernetes implements standard Kubernetes API, documented at https://www.civo.com/docs/kubernetes
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+note: No OpenAPI specification found for Civo Cloud API. Conformance assessed based on published documentation.

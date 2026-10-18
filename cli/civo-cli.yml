@@ -1,0 +1,110 @@
+generated: '2026-10-18'
+method: searched
+generator: extract-docs-artifacts.py (deepseek)
+source: https://www.civo.com/docs/overview/tools-overview
+sources:
+- https://www.civo.com/docs/overview/tools-overview
+- https://www.civo.com/docs/overview/civo-cli
+install:
+- method: curl script
+  command: curl -sL https://civo.com/get | sh
+- method: Homebrew (macOS/Linux)
+  command: 'brew tap civo/tools
+
+    brew install civo'
+- method: Chocolatey (Windows)
+  command: choco install civo-cli
+- method: Scoop (Windows)
+  command: 'scoop bucket add extras
+
+    scoop install civo'
+- method: Linux wget
+  command: 'CIVO_VERSION=$(curl -s https://api.github.com/repos/civo/cli/releases/latest | grep ''"tag_name":'' | sed -E ''s/.*"([^"]+)".*/\1/''
+    | cut -c2-)
+
+    ARCH=$(uname -m)
+
+    case $ARCH in
+
+    x86_64) ARCH="amd64" ;;
+
+    aarch64) ARCH="arm64" ;;
+
+    armv7l) ARCH="arm" ;;
+
+    *) echo "Unsupported architecture: $ARCH" && exit 1 ;;
+
+    esac
+
+    wget https://github.com/civo/cli/releases/download/v${CIVO_VERSION}/civo-${CIVO_VERSION}-linux-${ARCH}.tar.gz'
+- method: Build from source
+  command: 'git clone https://github.com/civo/cli.git
+
+    cd cli
+
+    make
+
+    cd ..
+
+    cp -r cli ./$HOME
+
+    export PATH="$HOME/cli:$PATH"'
+commands:
+- group: apikey
+  commands:
+  - apikey save
+  purpose: Manage API keys used to access your Civo account
+- group: database
+  purpose: Manage Civo Database
+- group: diskimage
+  purpose: Details of Civo disk images
+- group: domain
+  purpose: Details of Civo domains
+- group: firewall
+  purpose: Details of Civo firewalls
+- group: instance
+  purpose: Details of Civo instances
+- group: ip
+  purpose: Details of Civo reserved IPs
+- group: kubernetes
+  commands:
+  - kubernetes create
+  - kubernetes applications ls
+  purpose: Details of Civo Kubernetes clusters
+- group: loadbalancer
+  purpose: Details of Civo Load Balancer
+- group: network
+  purpose: Details of Civo networks
+- group: objectstore
+  purpose: Civo Object Store/Bucket management commands
+- group: permissions
+  purpose: List available permissions
+- group: quota
+  purpose: Show quota
+- group: region
+  commands:
+  - region ls
+  - region use
+  purpose: Details of Civo regions
+- group: size
+  commands:
+  - size list
+  purpose: Details of Civo instance sizes
+- group: sshkey
+  purpose: Details of Civo SSH keys
+- group: teams
+  purpose: Manage teams in Civo
+- group: update
+  commands:
+  - update
+  purpose: Update the cli to the last version
+- group: version
+  purpose: Version will output the current build information
+- group: volume
+  purpose: Details of Civo volumes
+binary: civo
+repo: https://github.com/civo/cli
+name: Civo CLI
+docs: https://www.civo.com/docs/overview/civo-cli
+note: The Civo CLI is a command-line interface that allows you to create, manage and delete resources such as Kubernetes clusters and instances
+  through the Civo API programmatically through your terminal.

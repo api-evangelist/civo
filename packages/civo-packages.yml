@@ -1,0 +1,58 @@
+generated: '2026-10-18'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io)
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (civo.com, security/civo-domain-security.yml)
+  or its accepted GitHub org.'
+packages:
+- name: civo
+  registry: rubygems
+  url: https://rubygems.org/gems/civo
+  language: Ruby
+  official: true
+  version: '1.7'
+  published: '2025-08-21'
+  evidence: metadata names civo.com
+- name: civo
+  registry: pypi
+  url: https://pypi.org/project/civo/
+  language: Python
+  official: false
+  version: 1.0.8
+  published: '2021-03-01'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: terraform-provider-civo
+  registry: terraform
+  url: https://registry.terraform.io/providers/civo/civo
+  language: Terraform
+  official: true
+  version: 1.3.3
+  published: '2026-09-29'
+  evidence: provider namespace is civo and source is https://github.com/civo/terraform-provider-civo
+- name: civo-cli
+  registry: github
+  url: https://github.com/civo/cli
+  language: Go
+  official: true
+  version: null
+  published: null
+  evidence: official CLI repository in Civo GitHub organization
+  note: CLI distributed via install script, not through package registry
+- name: civo
+  registry: npm
+  url: https://www.npmjs.com/package/civo
+  language: JavaScript
+  official: false
+  version: null
+  published: null
+  evidence: package was unpublished, no metadata available
+  note: package appears to have been unpublished from npm
+- name: civo-mcp
+  registry: npm
+  url: https://www.npmjs.com/package/civo-mcp
+  language: JavaScript
+  official: false
+  version: 0.1.6
+  published: null
+  evidence: third-party community package by tao12345666333
+  note: Community MCP server, not official Civo package

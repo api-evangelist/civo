@@ -1,23 +1,167 @@
 aid: civo
+
 name: Civo
-description: 'Civo is a company surfaced via the API Evangelist harvest backlog (source: capability-gaps)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Civo is a sovereign cloud and AI platform ("Civo - Sovereign Cloud and AI Platform") offering public cloud services including managed Kubernetes, compute instances, databases and the Konstruct IDP, private cloud via CivoStack Enterprise and Civo FlexCore, and Civo AI GPU workloads. Developers manage resources through the Civo Cloud API (api.civo.com), documented at civo.com/api, along with webhooks, a dashboard, documentation and a public GitHub organization.
+
 url: https://raw.githubusercontent.com/api-evangelist/civo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:capability-gaps
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-18 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-18'
+
 modified: '2026-10-18'
+
 tags:
 - Company
-apis: []
+- Cloud
+- Kubernetes
+- Cloud Computing
+- Infrastructure
+- Artificial Intelligence
+- GPU
+- Sovereign Cloud
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.civo.com/cms/api/media/file/homepage-social-1200x630.png
+
 common:
+- type: Plans
+  url: plans/civo-plans-pricing.yml
+- type: Spectral
+  url: rules/civo-rules.yml
+- type: Vocabulary
+  url: vocabulary/civo-vocabulary.yml
+- type: CLI
+  url: cli/civo-cli.yml
+- type: Conventions
+  url: conventions/civo-conventions.yml
+- type: Authentication
+  url: authentication/civo-authentication.yml
+- type: Lifecycle
+  url: lifecycle/civo-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/civo-problem-types.yml
+- type: Conformance
+  url: conformance/civo-conformance.yml
+- type: LLMsTxt
+  url: llms/civo-llms.txt
+- type: WellKnown
+  url: well-known/civo-well-known.yml
+- type: Hosts
+  url: hosts/civo-hosts.yml
+- type: Vendors
+  url: vendors/civo-vendors.yml
+- type: SDKs
+  url: packages/civo-packages.yml
+- type: Packages
+  url: packages/civo-packages.yml
+- type: Security
+  url: https://www.civo.com/marketplace/category/security
+- type: Leadership
+  url: https://www.civo.com/marketplace/category/management
+- type: DomainSecurity
+  url: security/civo-domain-security.yml
 - type: Website
   url: https://www.civo.com
+- type: DeveloperPortal
+  url: https://www.civo.com/developers
+- type: Documentation
+  url: https://www.civo.com/docs
+- type: APIReference
+  url: https://www.civo.com/api
+- type: GettingStarted
+  url: https://www.civo.com/docs/database/getting-started
+- type: Support
+  url: https://support.civo.com
+- type: Blog
+  url: https://www.civo.com/blog
+- type: Newsroom
+  url: https://www.civo.com/newsroom
+- type: GitHubOrganization
+  url: https://github.com/civo
+- type: Pricing
+  url: https://www.civo.com/pricing
+- type: SignUp
+  url: https://dashboard.civo.com/signup
+- type: Login
+  url: https://dashboard.civo.com/login
+- type: TermsOfService
+  url: https://www.civo.com/legal/terms
+- type: PrivacyPolicy
+  url: https://www.civo.com/legal/privacy
+- type: StatusPage
+  url: https://status.civo.com
+- type: Webhooks
+  url: https://www.civo.com/api/webhooks
+- type: About
+  url: https://www.civo.com/about
+
+apis:
+- aid: civo:civo-cloud-api
+  name: Civo Cloud API
+  description: The Civo Cloud API (v2) covers the Civo cloud platform -- instances, Kubernetes clusters, networks and VPCs, firewalls, volumes, databases, object stores, regions, disk images and webhooks. Requests carry a bearer API key in the Authorization header and 2xx responses are JSON. Civo publishes per-resource reference pages at civo.com/api but no machine-readable contract (no OpenAPI found on api.civo.com or in the civo GitHub org).
+  humanURL: https://www.civo.com/api
+  baseURL: https://api.civo.com/v2
+  tags:
+  - Cloud
+  - Kubernetes
+  properties:
+  - type: APIReference
+    url: https://www.civo.com/api
+  - type: Webhooks
+    url: https://www.civo.com/api/webhooks
+
+- aid: civo:civo-api
+
+  name: Civo API
+
+  description: 'Civo API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-18); not the
+
+    provider''s own document.'
+
+  humanURL: https://www.civo.com/docs/overview/civo-cli
+
+  baseURL: https://civo.com
+
+  properties:
+
+  - type: OpenAPI
+
+    url: openapi/_ae-authored/civo-openapi-generated.yml
+
+    x-provenance: generated
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website www.civo.com verified 200 (title "Civo - Sovereign Cloud and AI Platform"); pointers taken from preflight site_links and re-probed.
+  evidence:
+  - url: https://www.civo.com
+    status: 200
+  - url: https://www.civo.com/api
+    status: 200
+  - url: https://www.civo.com/about
+    status: 200
+  - url: https://support.civo.com
+    status: 200
+  - url: https://www.civo.com/cms/api/media/file/homepage-social-1200x630.png
+    status: 200
+x-enrichment:
+  date: '2026-10-18'
+  status: enriched
+  artifacts_added: 28
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=deepseek,regulatory=anthropic

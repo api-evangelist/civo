@@ -1,0 +1,22 @@
+generated: '2026-10-18'
+method: searched
+source: https://www.civo.com/api#parameters-and-responses
+auth_style: bearer-token
+idempotency:
+  coverage: none
+  evidence: No idempotency mechanism documented
+pagination:
+  style: unknown
+  evidence: No pagination conventions documented
+error_envelope:
+  shape: mixed
+  evidence: "2xx responses are JSON-encoded objects. 4xx/5xx status may not be JSON, unless it's obvious that the response should be parsed for a specific reason."
+request_id_tracing: none
+versioning:
+  scheme: url-path
+  evidence: API uses v2 in URL path (https://api.civo.com/v2)
+rate_limit_signaling: none
+reversibility:
+  coverage: none
+  evidence: No reversal operations documented
+note: Limited conventions documentation. API uses bearer token authentication, JSON responses for 2xx, mixed format for errors.

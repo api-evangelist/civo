@@ -1,0 +1,7 @@
+generated: '2026-10-18'
+method: none
+source: https://www.civo.com/docs
+name: Civo rate limits
+limit_count: 0
+limits: []
+note: No published API rate limits found. Documentation mentions account quotas for resource allocation but no API request rate limits documented.

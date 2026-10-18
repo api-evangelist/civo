@@ -1,0 +1,84 @@
+openapi: 3.1.0
+info:
+  title: Civo API
+  version: '2026-10-18'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-18: 3 operation(s) read from 3 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Civo has published no machine-readable contract that the pipeline
+    could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 0
+    pages-with-code: 3
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-18'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://www.civo.com/docs/overview/civo-cli
+  - https://api.civo.com
+  - https://www.civo.com/docs/overview/tools-overview
+servers:
+- url: https://civo.com
+paths:
+  /get:
+    get:
+      operationId: get_get
+      tags:
+      - Get
+      summary: GET /get
+      x-source: https://www.civo.com/docs/overview/civo-cli
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -sL https://civo.com/get | sh \n MacOS Homebrew ​ \n On a Mac, Civo CLI can be installed using the brew package manager:\
+          \ \n brew tap civo/tools brew install civo \n You should then be able to run civo and receive the initial help message and continue\
+          \ to the Setting up section below. \n Windows ​ \n Civo CLI is available to download on Windows via Chocolatey and Scoop. \n For installing\
+          \ via the Choco"
+  /v2/auth/exchange:
+    post:
+      operationId: post_v2_auth_exchange
+      tags:
+      - Auth
+      summary: POST /v2/auth/exchange
+      x-source: https://api.civo.com
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -H \"Authorization: Bearer <apikey>\"\n -X POST https://api.civo.com/v2/auth/exchange\n Parameters and responses \n If\
+          \ you are sending information to the API such as the details of an instance to create, these should be sent as normal form encoded variables\
+          \ or as a JSON object. \n The response of an API will be a JSON-encoded object for all 2xx statuses. 4xx/5xx status may not be JSON,\
+          \ unless it's "
+  /v2/instances:
+    get:
+      operationId: get_v2_instances
+      tags:
+      - Instances
+      summary: GET /v2/instances
+      x-source: https://api.civo.com
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "Authorization: bearer 12345" https://api.civo.com/v2/instances -d hostname=test.example.com '
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Auth
+- name: Get
+- name: Instances

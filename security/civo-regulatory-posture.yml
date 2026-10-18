@@ -1,0 +1,89 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://www.civo.com/legal/privacy
+- https://www.civo.com/legal/data-processing-agreement
+- https://www.civo.com/legal/terms
+- https://www.civo.com/legal/cookie
+signals:
+  data_subject_request:
+    url: https://www.civo.com/legal/privacy
+    section: 8. Your Rights / 16. Additional information
+    note: Lists UK/EU GDPR rights (access, erasure, portability, objection, restriction) and names the DPO channel; the US-state sections commit to a 45-day response window.
+    evidence:
+    - source: https://www.civo.com/legal/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: If you have any questions that could not be answered by this privacy notice or if you wish to receive more in-depth information about any topic within it, please contact our DPO and Compliance Team via email on dpo@civo.com.
+    - source: https://www.civo.com/legal/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: Civo will respond to your request without undue delay, but in all cases and at the latest within 45 days of its receipt.
+    - source: https://www.civo.com/legal/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: For customers based in the EU, our EU representative can be contacted on eurep@civo.com. If you wish to exercise your rights under the EU GDPR or have any questions regarding data privacy, please contact eudpo@civo.com.
+  subprocessors:
+    url: https://www.civo.com/legal/data-processing-agreement
+    section: 8. Subcontractors
+    note: DPA commits to 30 days prior written notice of new or replacement subcontractors with a right to object; no published subprocessor list was found (/legal/subprocessors and /legal/sub-processors return 404).
+    evidence:
+    - source: https://www.civo.com/legal/data-processing-agreement
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: Processor will give the Customer at least 30 days' prior written notice of any intended addition or replacement of a subcontractor engaged to process the Personal Data.
+    - source: https://www.civo.com/legal/data-processing-agreement
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: The Customer may object to a proposed subcontractor on reasonable grounds relating to data protection by giving Processor written notice within the 30 day notice period.
+  incident_notification:
+    url: https://www.civo.com/legal/data-processing-agreement
+    section: 6. Personal Data Breach
+    note: DPA commits to notify the customer of a Personal Data Breach within 48 hours. The privacy notice separately says regulators are notified only where legally required.
+    evidence:
+    - source: https://www.civo.com/legal/data-processing-agreement
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: 'Processor will within 48 hours and without undue delay notify the Customer if it becomes aware of:'
+    - source: https://www.civo.com/legal/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: Third parties and any applicable regulators will only be notified where we are legally required to do so.
+  data_retention:
+    url: https://www.civo.com/legal/privacy
+    section: 5. How Long we Keep Information For
+    note: Purpose-bound retention with no fixed periods in the privacy notice; the DPA sets deletion or return within 6 months of termination.
+    evidence:
+    - source: https://www.civo.com/legal/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: We will only retain your personal data for as long as reasonably necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting or reporting requirements.
+    - source: https://www.civo.com/legal/data-processing-agreement
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: Within 6 months from the day of termination of the Services for any reason or expiry of the Term, Processor will securely delete or destroy or, if directed in writing by the Customer, return and not retain, all or any Personal Data related to this Agreement in its possession or control unless retention by the Processor is required as set out at 11.3.
+  exit_assistance:
+    url: https://www.civo.com/legal/data-processing-agreement
+    section: 11. Data Return And Destruction
+    note: Customer can request a copy of or access to its personal data in an agreed format; scope is personal data under the DPA, not general workload/cloud data export.
+    evidence:
+    - source: https://www.civo.com/legal/data-processing-agreement
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: At the Customer's request, Processor will give the Customer a copy of or access to all or part of the Customer's Personal Data in its possession or control in the format agreed between the parties.
+probed_absent:
+- signal: subprocessors
+  urls:
+  - url: https://www.civo.com/legal/subprocessors
+    status: 404
+  - url: https://www.civo.com/legal/sub-processors
+    status: 404
+  note: No published subprocessor table; only the DPA notice-and-objection mechanism above.
+- signal: global_privacy_control
+  urls:
+  - url: https://www.civo.com/legal/privacy
+    status: 200
+  - url: https://www.civo.com/legal/cookie
+    status: 200
+  note: Neither the privacy notice nor the cookie policy mentions Global Privacy Control or browser opt-out preference signals; opt-out of targeted advertising is by contacting the DPO.
+privacy_notice_last_updated: '2026-01-29'

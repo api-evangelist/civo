@@ -1,0 +1,136 @@
+generated: '2026-10-18'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 8
+  own: 7
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - identity
+  - other
+  - source
+  - status
+  - support
+  - website
+hosts:
+- host: api.civo.com
+  found_by:
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves:
+  - api
+  title: Civo Cloud API Documentation - Civo.com
+  status: 200
+  registrable_domain: civo.com
+  role: api
+  relation: own
+- host: careers.civo.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: civo.com
+  role: other
+  relation: own
+- host: civo.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: civo.com
+  role: other
+  relation: own
+- host: dashboard.civo.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - SignUp
+  - Login
+  serves: []
+  registrable_domain: civo.com
+  role: identity
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: status.civo.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - StatusPage
+  serves:
+  - hosting
+  vendor: netlify
+  registrable_domain: civo.com
+  role: status
+  relation: own
+- host: support.civo.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Support
+  serves:
+  - hosting
+  vendor: hubspot
+  registrable_domain: civo.com
+  role: support
+  relation: own
+- host: www.civo.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Security
+  - Leadership
+  - Website
+  - DeveloperPortal
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - Blog
+  - Newsroom
+  - Pricing
+  - TermsOfService
+  - PrivacyPolicy
+  - Webhooks
+  - About
+  serves:
+  - docs
+  registrable_domain: civo.com
+  role: website
+  relation: own

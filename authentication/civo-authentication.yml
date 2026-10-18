@@ -1,0 +1,27 @@
+generated: '2026-10-18'
+method: searched
+generator: extract-docs-artifacts.py (deepseek)
+source: https://www.civo.com/docs/account/api-keys
+sources:
+- https://www.civo.com/docs/account/api-keys
+- https://www.civo.com/docs/account/signing-up
+- https://www.civo.com/docs/object-stores/object-store-credentials
+- https://www.civo.com/docs/database/getting-started
+description: Civo provides API key authentication for its main API and CLI, and S3-style credentials for object store access.
+schemes:
+- type: apiKey
+  name: API Key
+  evidence: To authenticate the account for the API or tools that use it such as the Civo command-line interface, you will need to provide an
+    API key that is unique to your account.
+  header: Authorization
+  location: header
+  how_to_obtain: In order to acquire the API key for an account, navigate to the Profile/Security section of your Civo account.
+- type: other
+  name: S3 Credentials
+  evidence: To access object store contents through the S3 API, you will need to create a credential that can be associated with the store.
+  how_to_obtain: 'On the credentials management page, you can drop down on the credential of your choosing to list its details: This detail page
+    shows two pieces of information for the credential: The Access Key ID, The hidden secret key'
+docs: https://www.civo.com/docs/account/api-keys, https://www.civo.com/docs/object-stores/object-store-credentials
+note: The API key documentation doesn't explicitly state the header name or location, but based on common API patterns and the evidence stating
+  it's used to "authenticate you for tools that interact with the Civo API", it's reasonable to infer it goes in the Authorization header. The
+  S3 credentials are for accessing object stores via S3 API.

@@ -1,0 +1,5 @@
+generated: '2026-10-18'
+method: none
+source: https://www.civo.com/api
+decline_codes: []
+note: Civo is not a payments/authorization provider. No decline codes documented.

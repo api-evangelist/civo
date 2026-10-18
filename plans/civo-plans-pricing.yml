@@ -1,0 +1,20 @@
+generated: '2026-10-18'
+method: searched
+source: https://www.civo.com/pricing
+name: Civo pricing
+audience: developer-api
+pricing_basis: usage-other
+published: true
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-18'
+plans:
+- name: Free Credits
+  description: New account credits
+  price_text: $250 free credits
+  features:
+  - For new accounts
+  - No credit card required
+  - Expires after 30 days
+note: Pricing is usage-based with hourly billing. All plans include free data transfer. New accounts receive $250 free credits.

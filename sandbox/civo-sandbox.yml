@@ -1,0 +1,6 @@
+generated: '2026-10-18'
+method: none
+source: https://www.civo.com/pricing, https://www.civo.com/docs/account/signing-up
+description: No dedicated sandbox environment found. Civo offers $250 free credits for new accounts but requires payment method verification. No test cards or sandbox-specific endpoints documented.
+docs: https://www.civo.com/docs/account/signing-up
+note: New accounts receive $250 free credits but require credit card verification. No separate sandbox environment or test mode documented.

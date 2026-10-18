@@ -1,0 +1,5 @@
+generated: '2026-10-18'
+method: none
+source: https://www.civo.com/api
+scopes: []
+note: No OAuth scopes documented. Civo API uses API key authentication with bearer tokens. OAuth2 support mentioned for JWT exchange but no scope documentation found.

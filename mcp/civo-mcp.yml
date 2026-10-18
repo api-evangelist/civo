@@ -1,0 +1,59 @@
+name: Civo MCP Server
+type: MCPServer
+generated: '2026-10-18'
+method: searched
+status: none-official
+description: >-
+  Civo does not publish an official MCP server that we could find. We searched the web and checked
+  the hosts we probed: www.civo.com/llms.txt returned 404, mcp.civo.com did not resolve, and
+  support.civo.com/mcp returned 403 to both the request and a control request, which proves nothing
+  either way. The only Civo MCP server we found is a third-party community package, recorded below
+  as unofficial. Civo has no OpenAPI in this repo, so we derived no candidate tool list.
+source:
+- https://github.com/tao12345666333/civo-mcp
+- https://registry.npmjs.org/civo-mcp
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+probes:
+- url: https://mcp.civo.com/mcp
+  status: 0
+  note: host did not resolve
+- url: https://support.civo.com/mcp
+  status: 403
+  note: preflight opaque (control_status 403)
+community_servers:
+- name: civo-mcp
+  official: false
+  maintainer: Jintao Zhang (tao12345666333), not Civo
+  repository: https://github.com/tao12345666333/civo-mcp
+  package: https://www.npmjs.com/package/civo-mcp
+  registry: npm
+  version: 0.1.6
+  mode: local-stdio
+  install: npx civo-mcp
+  auth: api-key
+  auth_note: CIVO_API_KEY environment variable
+  tools_source: https://raw.githubusercontent.com/tao12345666333/civo-mcp/main/README.md
+  tools_evidence: documented (README tool list), not observed from a live tools/list
+  tools:
+  - create_instance
+  - list_instances
+  - reboot_instance
+  - shutdown_instance
+  - start_instance
+  - resize_instance
+  - delete_instance
+  - list_disk_images
+  - get_disk_image
+  - list_networks
+  - create_network
+  - rename_network
+  - delete_network
+  - list_kubernetes_clusters
+  - create_kubernetes_cluster
+  - delete_kubernetes_cluster
+  - list_kubernetes_versions
+  - list_sizes
+  - list_regions

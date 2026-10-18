@@ -1,0 +1,19 @@
+generated: '2026-10-18'
+method: searched
+source: https://www.civo.com/api#parameters-and-responses
+format: mixed
+envelope: none
+problems:
+- status: 403
+  title: Unauthorized
+  type: unauthorized
+  description: Access denied due to insufficient permissions or invalid credentials
+  remediation: Check API key permissions or authentication
+  evidence: "403 Unauthorized requests may have a reason attribute available in the JSON object."
+- status: 404
+  title: Not Found
+  type: not-found
+  description: Resource not found
+  remediation: Check resource ID or path
+  evidence: "404 Not Found pages are a standard page of text"
+note: Error documentation is minimal. 2xx responses are JSON-encoded objects, while 4xx/5xx responses may not be JSON unless obvious. No comprehensive error reference found.

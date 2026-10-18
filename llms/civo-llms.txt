@@ -1,0 +1,27 @@
+# Civo
+
+Append `.md` to the jobs list or any individual job URL for a markdown version (for example https://careers.civo.com/jobs.md).
+
+## Open positions
+
+- [All open positions](https://careers.civo.com/jobs): Browse every currently open job. Also available as markdown at https://careers.civo.com/jobs.md and as a JSON Feed with embedded JobPosting data at https://careers.civo.com/jobs.json.
+- [Senior Solution Engineer – GPU & AI Infrastructure](https://careers.civo.com/jobs/8541860-senior-solution-engineer-gpu-ai-infrastructure)
+- [Technical Project Manager – GPU & AI Infrastructure](https://careers.civo.com/jobs/8541856-technical-project-manager-gpu-ai-infrastructure): Technical
+- [GPU Infrastructure Support Engineer](https://careers.civo.com/jobs/8541557-gpu-infrastructure-support-engineer): Technical
+- [Senior GPU Infrastructure Engineer](https://careers.civo.com/jobs/8541539-senior-gpu-infrastructure-engineer): Technical
+- [Head of Finance](https://careers.civo.com/jobs/8408152-head-of-finance): Finance
+- [Senior Solution Engineer – GPU & AI Infrastructure](https://careers.civo.com/jobs/8199809-senior-solution-engineer-gpu-ai-infrastructure): Technical
+- [Sales Development Representative – India](https://careers.civo.com/jobs/6283546-sales-development-representative-india): Sales · Remote
+- [Go Developer - AI & ML](https://careers.civo.com/jobs/4608451-go-developer-ai-ml): Technical · Remote
+- [Senior Machine Learning Engineer / Tech Lead - AI & ML](https://careers.civo.com/jobs/4608439-senior-machine-learning-engineer-tech-lead-ai-ml): Technical · Remote
+
+## Optional
+
+- [People](https://careers.civo.com/people): The team behind Civo.
+- [Departments](https://careers.civo.com/departments): Our departments.
+- [Locations](https://careers.civo.com/locations): Office locations.
+- [Posts](https://careers.civo.com/posts): Posts and updates from Civo.
+- [Team stories](https://careers.civo.com/stories): Stories from people who work at Civo.
+- [Privacy policy](https://careers.civo.com/privacy-policy): How candidate data is handled.
+- [Cookie policy](https://careers.civo.com/cookie-policy): Cookie usage and consent.
+- [API catalog](https://careers.civo.com/.well-known/api-catalog): Machine-readable discovery document for available APIs.
