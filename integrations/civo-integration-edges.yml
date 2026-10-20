@@ -15,6 +15,17 @@ checked:
 - https://www.civo.com/api
 - https://www.civo.com/docs
 - https://zapier.com/apps/civo/integrations
+- https://manrs.org/netops/participants/
+- https://www.peeringdb.com/api/fac
+- https://www.peeringdb.com/api/ix
+- https://www.peeringdb.com/api/net
+- https://cdn.winget.microsoft.com/cache
+- https://formulae.brew.sh/api/cask.json
+- https://formulae.brew.sh/api/formula.json
+- https://github.com/ScoopInstaller/Extras
+- https://github.com/ScoopInstaller/Main
+- https://pypi.org/pypi
+- https://registry.npmjs.org
 summary: null
 marketplace_apps: []
 edges:
@@ -123,6 +134,67 @@ edges:
     detected: '2026-10-19'
   detected_by: sweep-cloud-native.py
   first_seen: '2026-10-19'
+- partner_name: PeeringDB (interconnection register)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.peeringdb.com/net/37476
+  category: network interconnection register
+  contract_reference:
+    register: PeeringDB (peeringdb.com/api net, ix, fac, org)
+    standard: null
+    spec_file: null
+    role: peeringdb-network
+    registered_name: Civo India
+    register_id: https://www.peeringdb.com/net/37476
+    matched_domain: civo.com
+    matched_by: domain
+    asns:
+    - 214122
+    info_types:
+    - Content
+    ix_presence: 1
+    exchanges_operated: []
+    facilities_operated: 0
+    signal_note: 'participation only: PeeringDB is self-registered by network operators; ASNs, IX presence and facility
+      counts are context, never counted'
+    detected_by: sweep-network-edge.py
+    detected: '2026-10-20'
+  detected_by: sweep-network-edge.py
+  first_seen: '2026-10-20'
+- partner_name: Scoop
+  partner: null
+  partner_match: null
+  type: register
+  direction: provider-built
+  category: official CLI (Scoop)
+  evidence: https://github.com/ScoopInstaller/Extras/blob/master/bucket/civo.json
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Scoop (public package index)
+    spec_file: null
+    packages:
+    - name: civo
+      kind: extras
+      version: 1.5.5
+      released: null
+      lapsed: false
+      page: https://github.com/ScoopInstaller/Extras/blob/master/bucket/civo.json
+      cli: 'scoop description: CLI library for managing cloud resources such as instances and Kubernetes cluste'
+      repo_leg: github-org:civo
+      publisher_leg: artifact-github-org:civo
+      matched_by: github-org
+    current: true
+    signal_note: 'the provider''s own command-line tool on a package manager: distribution, not an integration;
+      lapsed = no release in 24 months or deprecated / disabled by the manager'
+    detected_by: sweep-official-clis.py
+    detected: '2026-10-20'
+  detected_by: sweep-official-clis.py
+  first_seen: '2026-10-20'
 templates: []
 note: No integrations found. Checked Zapier marketplace and Civo documentation. No marketplace apps or partner integrations
   documented.
